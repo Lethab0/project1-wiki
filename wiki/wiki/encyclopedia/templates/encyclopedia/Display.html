@@ -1,0 +1,25 @@
+{% extends "encyclopedia/layout.html" %}
+
+
+{% block nav %}
+  <a href="/Edit/{{ Title }}" > Edit entry</a>
+{% endblock %}
+
+
+
+{% block body %}
+    <h1> {{ Title }} </h1> 
+
+       
+    <div>
+        {{ content }}  
+
+        {% for Guess in Guesses %}
+        <a href="/wiki/{{ Guess }}"> {{ Guess }} </a> 
+        {% endfor %}
+    </div>
+{% endblock %}
+
+
+
+        
